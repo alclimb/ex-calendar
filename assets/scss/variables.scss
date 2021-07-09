@@ -1,0 +1,40 @@
+/**
+ * 1. Your custom variables and variable overwrites.
+ */
+
+// HTML背景
+$global-background: #fff;
+
+// 各種背景色
+$global-primary-background: #333631;
+$global-secondary-background: #96514d;
+$global-danger-background: #96514d;
+$global-muted-background: #f5f5f5;
+
+// 文字の色
+$global-emphasis-color: #575334;
+$global-inverse-color: #fff;
+$inverse-global-color: rgba($global-inverse-color, 0.9);
+
+// フォント
+$global-font-family: "Noto Serif JP", serif;
+
+// リンクの色
+$global-link-color: #96514d;
+
+// 枠線の色
+$global-border: #e5e5e5;
+
+// 枠線の太さ
+$global-border-width: 2px;
+
+// 枠線の丸め
+$global-border-radius: 8px;
+
+/**
+ * 2. Import default variables and available mixins.
+ */
+
+ @import "~uikit/src/scss/variables-theme.scss";
+ @import "~uikit/src/scss/mixins-theme.scss";
+ 

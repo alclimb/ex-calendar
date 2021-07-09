@@ -9,11 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/composition-api": "^0.24.6",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "uikit": "^3.7.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.7",
-    "@nuxt/typescript-build": "^2.1.0"
+    "@nuxt/typescript-build": "^2.1.0",
+    "@types/uikit": "^3.3.2",
+    "sass": "^1.32.11",
+    "sass-loader": "^10.1.1"
   }
 }

@@ -1,5 +1,11 @@
 <template>
-  <div>test</div>
+  <div>
+    <section class="uk-section">
+      <div class="uk-container">
+        <AppCalendar></AppCalendar>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script lang="ts">

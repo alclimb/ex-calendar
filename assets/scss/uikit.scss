@@ -1,0 +1,71 @@
+
+@import "/assets/scss/variables.scss";
+
+/**
+ * 3. Your custom mixin overwrites.
+ */
+
+@mixin hook-accordion-title() {
+  & > ::before {
+    background-image: none;
+  }
+}
+
+@mixin hook-accordion-content() {
+  background-color: rgba($global-primary-background, 0.03);
+  padding: 20px;
+  border-radius: $base-pre-border-radius;
+}
+
+/**
+ * 4. Import UIkit.
+ */
+
+@import "~uikit/src/scss/uikit-theme.scss";
+
+/**
+ * Customize UIkit
+ */
+
+.uk-height-viewport {
+  // iOSでの100vh対応
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.uk-button-text::before {
+  transition: right 0.15s ease-out;
+}
+
+.uk-text-large {
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.uk-button-default {
+  &:hover {
+    color: #fff;
+    background-color: $global-primary-background;
+  }
+}
+
+.uk-button-primary {
+  &:hover {
+    color: $global-primary-background;
+    background-color: #fff;
+    border: 1px solid $global-primary-background;
+  }
+}
+
+.uk-table-hover > tr:hover,
+.uk-table-hover tbody tr:hover {
+  background-color: rgba($global-primary-background, 0.03);
+}
+
+.uk-offcanvas-bar {
+  background-color: $global-primary-background;
+}
+
+.uk-lightbox-button {
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}

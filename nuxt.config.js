@@ -21,10 +21,16 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // Custom main SCSS
+    '~/assets/scss/main.scss',
+
+    // Custom uikit SCSS
+    '~/assets/scss/uikit.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/uikit' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -34,6 +40,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+
+    // https://composition-api.nuxtjs.org/
+    '@nuxtjs/composition-api/module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

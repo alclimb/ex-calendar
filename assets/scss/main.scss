@@ -1,0 +1,116 @@
+@import "/assets/scss/variables.scss";
+
+/**
+ * ページ遷移トランジション
+ */
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.1s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+/**
+ * テーブル
+ */
+
+// 枠線の設定
+table.app-table {
+  border-collapse: separate; // 角丸の場合に必要
+  border: $global-border-width solid $global-border;
+  border-radius: $global-border-radius;
+  border-spacing: 0;
+  overflow: hidden;
+
+  tbody {
+    // 横線
+    tr:not(:last-child) {
+      td {
+        border-bottom: $global-border-width solid $global-border;
+      }
+    }
+
+    // 縦線
+    td:not(:last-child) {
+      border-right: $global-border-width solid $global-border;
+    }
+  }
+}
+
+// テーブルデザイン
+table.app-table {
+  line-height: 1.5;
+
+  td.app-table-header {
+    padding: 0 1rem;
+    white-space: nowrap;
+    background-color: $global-muted-background;
+    text-align-last: justify;
+    font-weight: normal;
+  }
+
+  td {
+    padding: 1rem;
+  }
+}
+
+/**
+ * テキスト
+ */
+
+// 縦書きテキスト
+.my-text-vertical {
+  writing-mode: vertical-rl;
+}
+
+// リンクタップ時のハイライト色を透明に変更する
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/**
+ * 
+ */
+
+.app-letter-spacing {
+  letter-spacing: 3px;
+}
+
+.app-border {
+  border: 8px solid #000;
+}
+
+.app-border-radius {
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.app-side-left {
+  @media (max-width: 639px) {
+    width: 100%;
+    height: 450px;
+  }
+  @media (min-width: 640px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+.app-side-right {
+  @media (max-width: 639px) {
+  }
+  @media (min-width: 640px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    margin-left: 50%;
+  }
+}
